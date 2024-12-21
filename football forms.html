@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chelsea Football Club - Member Registration</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #034694; /* Chelsea FC's blue color */
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #034694;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #003580;
+        }
+        @media only screen and ((min-width:320px)and(max-width:375px)){
+    aside,article{
+        display: none;
+    }
+    main{
+        width:100%;
+        height: 90vh;
+    }
+    header{
+        height: 20vh;
+        background-color: rgb(41, 48, 2);
+    }
+    nav li {
+        width: 100%;
+        height: auto;
+    }
+    nav{
+        height: auto;
+    }
+}
+@media only screen and(max-width:768px){
+    header{
+        display: block;
+    }
+    aside, article{
+        display: none;
+    }
+    nav{
+        width: 25%;
+        min-height: 50vh;
+        height: auto;
+    }
+}
+@media only screen and ((min-width:768px)and(max-width:1024px)){
+    aside,article{
+        display: none;
+    }
+    main{
+        width: 100%;
+        height: auto;
+        min-height: 30vh;
+    }
+    nav{
+        height: auto;
+        min-height: 30vh;
+    }
+    nav ul {
+        display: contents;
+    }
+    nav li{
+        width: 100%; 
+    }
+    nav li :hover{
+        background-color: steelblue ;
+        width: 98%;
+        margin: 0 1%;
+        border-radius: 5px;
+
+    }
+}
+@media only screen and((min-width:1024px)and(max-width:1920px)){
+    aside, article{
+         display: none;
+    }
+    nav{
+        width: 15%;
+        float: left;
+        height: auto;
+        min-height: 75vh;
+    }
+    li>a{
+        color: cyan;
+    }
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CHELSEA SPORTS CLUB</h1>
+        <form action="mailto:fostersarkodienimoh0@gmail.com" method="POST" enctype="text/plain" onsubmit="return validateForm()">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{10}" title="Enter a valid 10-digit phone number">
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="gender">Gender</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select your gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+            <label for="address">Address</label>
+            <textarea id="address" name="address" placeholder="Enter your address" rows="3" required></textarea>
+
+            <label for="membershipType">Membership Type</label>
+            <select id="membershipType" name="membershipType" required>
+                <option value="">Select membership type</option>
+                <option value="player">Player</option>
+                <option value="coach">Coach</option>
+                
+            </select>
+
+            <label for="sportsInterest">Sports of Interest</label>
+            <input type="text" id="sportsInterest" name="sportsInterest" placeholder="E.g., Football, Basketball, Tennis" required>
+            <label for="Position">Postion of player (optional)</label>
+            <input type="text" id="position of player(optional)" name="position of player (optional)" placeholder="E.g.,Attacker,Midfielder,Defender,Goalkeeper" optional>
+
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                I agree to the terms and conditions
+            </label>
+
+            <input type="submit" value="Register">
+        </form>
+    </div>
+    <script>
+        function validateForm() {
+            // Additional custom validation logic can be added here if needed
+            alert("Form submitted successfully!");
+            return true;
+            
+        }
+    </script>
+     
+</body>
+<footer> <h4><a href="MY SELF.html">Home</a></h4></footer>
+</html>
